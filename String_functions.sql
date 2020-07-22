@@ -27,3 +27,27 @@
 --     CONCAT(stock_quantity, " in stock") AS "quantity"
 -- FROM books;
 
+-- SELECT DISTINCT released_year FROM books;
+
+-- SELECT DISTINCT CONCAT(author_fname, " ", author_lname) FROM books;
+-- SELECT DISTINCT author_fname, author_lname FROM books;
+
+-- SELECT title FROM books ORDER BY title;
+-- SELECT DISTINCT author_lname, released_year FROM books ORDER BY title;
+-- SELECT DISTINCT author_lname FROM books ORDER BY released_year;
+
+-- SELECT UPPER(title), released_year FROM books ORDER BY released_year;
+-- SELECT title AS "book title", author_lname AS "author last name",
+--     author_fname AS "author name"
+-- FROM books
+-- ORDER BY 2 DESC; 
+
+-- SELECT title FROM books WHERE author_lname LIKE "%la%";
+-- SELECT title, author_lname
+-- FROM books
+-- WHERE author_lname LIKE "la%" ORDER BY 1;
+
+-- SELECT title FROM books WHERE title LIKE "%stories%";
+
+-- SELECT title, pages FROM books ORDER BY pages DESC LIMIT 1;
+-- SELECT CONCAT(title, " - ", released_year) AS "summary" FROM books ORDER BY released_year DESC LIMIT 3;
