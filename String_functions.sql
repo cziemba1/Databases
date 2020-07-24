@@ -51,3 +51,51 @@
 
 -- SELECT title, pages FROM books ORDER BY pages DESC LIMIT 1;
 -- SELECT CONCAT(title, " - ", released_year) AS "summary" FROM books ORDER BY released_year DESC LIMIT 3;
+-- SELECT title, author_lname FROM books WHERE author_lname LIKE "% %";
+-- SELECT title, released_year, stock_quantity FROM books ORDER BY stock_quantity LIMIT 3; 
+-- SELECT title, author_lname FROM books ORDER BY author_lname, title;
+-- SELECT DISTINCT CONCAT("MY FAVORITE AUTHOR IS ", UPPER(CONCAT(author_fname, " ", author_lname))) AS "yell" FROM books ORDER BY author_lname;
+
+-- SELECT COUNT(*) FROM books WHERE title LIKE "%a%";
+-- SELECT COUNT(DISTINCT author_lname, author_fname) FROM books;
+
+-- SELECT CONCAT(author_fname, " ", author_lname) AS "author", COUNT(title) AS "amount of books" FROM books GROUP BY author_fname, author_lname;
+
+-- SELECT CONCAT(author_fname, " ", author_lname) AS "author", released_year AS "Year of first published book"
+-- FROM books
+-- GROUP BY MIN(released_year);
+
+-- SELECT COUNT(book_id) FROM books;
+-- SELECT COUNT(book_id), released_year FROM books GROUP BY released_year;
+-- SELECT SUM(stock_quantity) FROM books;
+
+-- SELECT CONCAT(author_fname, " ", author_lname), AVG(released_year)
+-- FROM books
+-- GROUP BY author_fname, author_lname;
+
+-- SELECT CONCAT(author_fname, " ", author_lname)
+-- FROM books
+-- WHERE pages = (SELECT MAX(pages) FROM books);
+
+-- SELECT released_year AS "year", COUNT(book_id) AS "# books", AVG(pages) AS "avg pages"
+-- FROM books
+-- GROUP BY released_year
+-- ORDER BY released_year;
+
+-- SELECT title FROM books WHERE released_year != 2003;
+-- SELECT title FROM books WHERE title LIKE "%er";
+-- SELECT title FROM books WHERE title NOT LIKE "%er";
+-- SELECT title, released_year FROM books WHERE released_year NOT LIKE "20%";
+-- SELECT title, released_year FROM books WHERE released_year LIKE "20%";
+-- SELECT title, stock_quantity FROM books WHERE stock_quantity > 20;
+-- SELECT title, stock_quantity FROM books WHERE stock_quantity <= 30;
+
+-- SELECT title, released_year FROM books
+-- WHERE released_year BETWEEN 1999 and 2010;
+
+-- SELECT title, released_year FROM books
+-- WHERE released_year IN (2002, 2000, 1999, 1998);
+
+-- SELECT title, released_year
+-- FROM books
+-- WHERE released_year NOT IN (2002, 1998);
