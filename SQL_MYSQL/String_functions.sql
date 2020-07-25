@@ -82,3 +82,20 @@
 -- GROUP BY released_year
 -- ORDER BY released_year;
 
+-- SELECT title FROM books WHERE released_year != 2003;
+-- SELECT title FROM books WHERE title LIKE "%er";
+-- SELECT title FROM books WHERE title NOT LIKE "%er";
+-- SELECT title, released_year FROM books WHERE released_year NOT LIKE "20%";
+-- SELECT title, released_year FROM books WHERE released_year LIKE "20%";
+-- SELECT title, stock_quantity FROM books WHERE stock_quantity > 20;
+-- SELECT title, stock_quantity FROM books WHERE stock_quantity <= 30;
+
+-- SELECT title, released_year FROM books
+-- WHERE released_year BETWEEN 1999 and 2010;
+
+-- SELECT title, released_year FROM books
+-- WHERE released_year IN (2002, 2000, 1999, 1998);
+
+-- SELECT title, released_year
+-- FROM books
+-- WHERE released_year NOT IN (2002, 1998);
